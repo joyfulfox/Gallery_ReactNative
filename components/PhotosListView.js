@@ -6,10 +6,10 @@ import {
     ActivityIndicator,
     SafeAreaView
 } from 'react-native';
-import { getPhotosList } from './api';
-import { PhotoView } from './photoView';
+import { getPhotosList } from '../api/index';
+import { PhotoView } from './PhotoView';
 
-export const Home = () => {
+export const PhotosListView = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [dataSource, setDataSource] = useState([]);
 
@@ -19,7 +19,7 @@ export const Home = () => {
         setIsLoading(false);
     }, []);
 
-    const { container, safeAreaStyle, flatListStyles } = styles;
+    const { container, safeAreaStyle, rowStyles, flatListStyles } = styles;
 
     return (
         <View style={container}>
@@ -33,7 +33,7 @@ export const Home = () => {
                             horizontal={false}
                             renderItem={PhotoView}
                             keyExtractor={(item) => item.id}
-                            columnWrapperStyle={{ justifyContent: 'space-between' }}
+                            columnWrapperStyle={rowStyles}
                             contentContainerStyle={flatListStyles}
                         />
                     </SafeAreaView>
@@ -53,6 +53,9 @@ const styles = StyleSheet.create({
         width: '95%',
         height: '100%',
         alignSelf: 'center'
+    },
+    rowStyles: {
+        justifyContent: 'space-between'
     },
     flatListStyles: {
         flexDirection: 'column',

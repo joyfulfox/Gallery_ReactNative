@@ -2,8 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 21884,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 17780,
+  "expoServerNgrokUrl": "https://6q-jiz.anonymous.testapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.6q-jiz.anonymous.testapp.exp.direct",
+  "ngrokPid": 22260
 }
